@@ -1,18 +1,25 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
   View,
   Text,
-  StatusBar,
 } from 'react-native';
+
+import {
+  getTheme,
+} from 'react-native-material-kit';
+
+const theme = getTheme();
 
 const App = () => {
   return (
-    <View>
-      <Text>Maybe?</Text>
-    </View>
+    <View style={theme.cardStyle}>
+  <Text style={theme.cardTitleStyle}>Welcome</Text>
+  <Text style={theme.cardContentStyle}>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Mauris sagittis pellentesque lacus eleifend lacinia...
+  </Text>
+  <Text style={theme.cardActionStyle}>My Action</Text>
+</View>
   );
 };
 
