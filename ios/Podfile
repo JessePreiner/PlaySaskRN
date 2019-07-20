@@ -28,7 +28,6 @@ target 'PlaySask' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
-  pod 'react-native-material-kit', :path => '../node_modules/react-native-material-kit'
 
   target 'PlaySaskTests' do
     inherit! :search_paths

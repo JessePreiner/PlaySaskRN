@@ -1,26 +1,31 @@
 import React from 'react';
-import {
-  View,
-  Text,
-} from 'react-native';
+import { View, Text } from 'react-native';
+import { AppContainer } from './Navigator';
 
-import {
-  getTheme,
-} from 'react-native-material-kit';
-
-const theme = getTheme();
-
-const App = () => {
-  return (
-    <View style={theme.cardStyle}>
-  <Text style={theme.cardTitleStyle}>Welcome</Text>
-  <Text style={theme.cardContentStyle}>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Mauris sagittis pellentesque lacus eleifend lacinia...
-  </Text>
-  <Text style={theme.cardActionStyle}>My Action</Text>
-</View>
-  );
+export function HomeScreen () {
+    return (
+        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+            <Text>Personalized Screen</Text>
+        </View>
+    );
 };
 
-export default App;
+export function Blog() {
+    return (
+        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+            <Text>Blog Screen</Text>
+        </View>
+    );
+};
+
+export function Games() {
+    return (
+        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+            <Text>Games Screen</Text>
+        </View>
+    );
+};
+
+export default function App() {
+    return <AppContainer />;
+}
