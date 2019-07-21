@@ -18,7 +18,7 @@
         "react-native-render-html": "^4.1.2",
         "react-native-vector-icons": "^6.6.0",
         "react-navigation": "^3.11.1",
-        "react-navigation-hooks": "^1.0.1",
+        "react-navigation-hooks": "^1.0.2-alpha.0",
         "wpcom": "^5.4.2"
     },
     "devDependencies": {

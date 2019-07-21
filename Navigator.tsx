@@ -1,8 +1,9 @@
-import { createBottomTabNavigator, createAppContainer } from 'react-navigation';
+import { createBottomTabNavigator, createAppContainer, createStackNavigator } from 'react-navigation';
 import { Products } from './product/containers/Products';
 import { Blog } from './blog/containers/Blog';
 import { Icon } from 'react-native-material-ui';
 import React from 'react';
+import PostDetails from './blog/containers/PostDetails';
 
 const AppNavigator = createBottomTabNavigator(
     {
@@ -10,10 +11,12 @@ const AppNavigator = createBottomTabNavigator(
         //     // personally set up shit
         //     screen: HomeScreen,
         // },
-        Blog: {
-            // blog
-            screen: Blog,
-        },
+        Blog: createStackNavigator({
+            List: {
+                screen: Blog,
+            },
+            Details: PostDetails,
+        }),
         Products: {
             // games
             screen: Products,

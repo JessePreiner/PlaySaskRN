@@ -1,10 +1,13 @@
 import { Post as PostModel } from '../../models/Post';
 import { ListItem } from 'react-native-material-ui';
 import format from 'date-fns/format';
-import { Linking, Image } from 'react-native';
+import { Image } from 'react-native';
 import React from 'react';
+import { useNavigation } from 'react-navigation-hooks';
 
 export default function Post({ post }: { key: number; post: PostModel }) {
+    const { navigate, push } = useNavigation();
+
     return (
         <ListItem
             divider
@@ -22,8 +25,11 @@ export default function Post({ post }: { key: number; post: PostModel }) {
                 secondaryText: post.author_info.display_name,
                 tertiaryText: format(post.date_gmt, 'MMMM Do YYYY'),
             }}
-            // TODO: add screen for displaying post
-            onPress={() => Linking.openURL(post.link)}
+            onPress={() =>
+                push('Details', {
+                    post,
+                })
+            }
         />
     );
 }

@@ -1,10 +1,12 @@
 import { Product as ProductModel } from '../../models/Product';
 import { ListItem } from 'react-native-material-ui';
-import { Linking, Image } from 'react-native';
+import { Image, Linking } from 'react-native';
 import React from 'react';
 import format from 'date-fns/format';
+import { useNavigation } from 'react-navigation-hooks';
 
 export default function Product({ post }: { key: number; post: ProductModel }) {
+    const nav = useNavigation();
     return (
         <ListItem
             divider
