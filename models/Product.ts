@@ -63,4 +63,5 @@ export interface Product {
     template: string;
     meta: any[];
     _links: _link;
+    _embedded?: { 'wp:featuredmedia': FeaturedMedia[] };
 }

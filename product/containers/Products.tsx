@@ -6,7 +6,7 @@ import React from 'react';
 
 export function Products() {
     const [products, setProducts] = useState<ProductModel[]>([]);
-    fetch('https://playsask.com/wp-json/wp/v2/product')
+    fetch('https://playsask.com/wp-json/wp/v2/product?_embed=1')
         .then((response) => {
             var contentType = response.headers.get('content-type');
             if (contentType && contentType.includes('application/json')) {
